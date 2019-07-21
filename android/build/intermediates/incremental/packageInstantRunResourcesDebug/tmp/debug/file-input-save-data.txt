@@ -1,0 +1,15 @@
+#Internal package file, do not edit.
+#Sun Jul 21 19:53:05 EEST 2019
+1.base=/home/aleksey/libGDX/SnakeGame/android/build/intermediates/merged_assets/debug/out
+2.path=snake.png
+0.baseType=DIRECTORY
+2.base=/home/aleksey/libGDX/SnakeGame/android/build/intermediates/merged_assets/debug/out
+2.set=ASSET
+1.baseType=DIRECTORY
+count=3
+1.set=ASSET
+0.path=apple.png
+0.set=ASSET
+0.base=/home/aleksey/libGDX/SnakeGame/android/build/intermediates/merged_assets/debug/out
+2.baseType=DIRECTORY
+1.path=badlogic.jpg
