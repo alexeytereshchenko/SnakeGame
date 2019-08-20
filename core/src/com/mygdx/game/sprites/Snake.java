@@ -120,10 +120,6 @@ public class Snake {
         }
     }
 
-    public void swip(){
-        if(Gdx.input.)
-    }
-
     private void reposition(){
         for (int i = getSnakeLength(); i > 0; i--) {
             x[i] = x[i-1];
@@ -134,4 +130,6 @@ public class Snake {
     public void dispose(){
         snake.dispose();
     }
+
+
 }

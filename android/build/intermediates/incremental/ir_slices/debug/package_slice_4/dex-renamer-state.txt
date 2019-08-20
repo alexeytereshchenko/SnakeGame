@@ -1,4 +1,0 @@
-#Sun Jul 21 19:54:24 EEST 2019
-base.0=/home/aleksey/libGDX/SnakeGame/android/build/intermediates/transforms/dexMerger/debug/4
-path.0=classes.dex
-renamed.0=classes.dex

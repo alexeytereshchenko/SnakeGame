@@ -30,19 +30,25 @@ public class PlayGameFieled implements Screen {
 
     }
 
+    private swipelistener swipe = new swipelistener();
+
     @Override
     public void render(float delta) {
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
         game.batch.begin();
 
+        //fps
+        game.font.getData().setScale(0.5f);
+        game.font.draw(game.batch, "fps: " + Gdx.graphics.getFramesPerSecond(), Gdx.graphics.getWidth() - 50, Gdx.graphics.getHeight() -20);
+        
         game.batch.draw(apple.getApple(), apple.x, apple.y, apple.getApple().getWidth(), apple.getApple().getHeight());
 
         for (int i = 0; i < snake.getSnakeLength(); i++) {
             game.batch.draw(snake.getSnake(), snake.x[i], snake.y[i], snake.getSnake().getWidth(), snake.getSnake().getHeight());
         }
 
-        game.font.getData().setScale(1f);
+        game.font.getData().setScale(0.5f);
         game.font.draw(game.batch, "score: " + (apple.getScore()), 16, 500);
 
         game.batch.end();

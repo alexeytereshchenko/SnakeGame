@@ -1,4 +1,0 @@
-#Fri Jul 19 13:27:15 EEST 2019
-base.0=/home/aleksey/libGDX/SnakeGame/android/build/intermediates/dex/release/mergeDexRelease/out
-path.0=classes.dex
-renamed.0=classes.dex

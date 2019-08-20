@@ -3,20 +3,29 @@ package com.mygdx.game.screens;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.GlyphLayout;
+import com.badlogic.gdx.utils.Align;
 import com.mygdx.game.SnakeGame;
 import com.mygdx.game.sprites.Apple;
 
 public class GameOver implements Screen {
 
     private SnakeGame game;
-    private BitmapFont font = new BitmapFont();
+    private BitmapFont font = new BitmapFont(Gdx.files.internal("droidSans.fnt"));
     private Apple apple;
 
+    private GlyphLayout layout;
+    
     public GameOver(SnakeGame game, Apple apple){
         this.game = game;
         this.apple = apple;
+        
+        layout = new GlyphLayout();
+        font.getData().setScale(1.0f);
+        layout.setText(font, "GAME OVER!", Color.WHITE, Gdx.graphics.getWidth(), Align.center, true);
     }
 
     @Override
@@ -26,11 +35,21 @@ public class GameOver implements Screen {
 
     @Override
     public void render(float delta) {
-        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-        game.batch.begin();
+	Gdx.gl.glClearColor(0, 0, 0, 0.2f);
+//	Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+	
+	game.batch.begin();
 
-        font.draw(game.batch, "game over", Gdx.graphics.getWidth()/2f, Gdx.graphics.getHeight()/2f);
-        font.draw(game.batch, "score: " + (apple.getScore()), 16, 500);
+        //fps
+//        font.getData().setScale(0.5f);
+//        font.draw(game.batch, "fps: " + Gdx.graphics.getFramesPerSecond(),
+//        	Gdx.graphics.getWidth() - 50, Gdx.graphics.getHeight() -20);
+        
+        //score
+//        font.draw(game.batch, "score: " + (apple.getScore()), 16, 500);
+
+        font.getData().setScale(1.0f);
+        font.draw(game.batch, layout, 0, Gdx.graphics.getHeight()/2f);
 
         game.batch.end();
 
@@ -39,7 +58,7 @@ public class GameOver implements Screen {
         }
 
     }
-
+    
     @Override
     public void resize(int width, int height) {
 
