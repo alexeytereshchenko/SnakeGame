@@ -46,7 +46,7 @@ public class Snake {
     private void defaultPosition(){
         for (int i = 0; i < snakeLength; i++) {
             x[i] = 48-16*i;
-            y[i] = 448;
+            y[i] = 448; 
         }
     }
 
