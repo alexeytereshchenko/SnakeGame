@@ -36,17 +36,8 @@ public class GameOver implements Screen {
     @Override
     public void render(float delta) {
 	Gdx.gl.glClearColor(0, 0, 0, 0.2f);
-//	Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-	
-	game.batch.begin();
 
-        //fps
-//        font.getData().setScale(0.5f);
-//        font.draw(game.batch, "fps: " + Gdx.graphics.getFramesPerSecond(),
-//        	Gdx.graphics.getWidth() - 50, Gdx.graphics.getHeight() -20);
-        
-        //score
-//        font.draw(game.batch, "score: " + (apple.getScore()), 16, 500);
+	game.batch.begin();
 
         font.getData().setScale(1.0f);
         font.draw(game.batch, layout, 0, Gdx.graphics.getHeight()/2f);

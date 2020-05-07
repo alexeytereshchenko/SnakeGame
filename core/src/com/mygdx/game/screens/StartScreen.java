@@ -13,15 +13,12 @@ import com.mygdx.game.SnakeGame;
 public class StartScreen implements Screen {
 
     private SnakeGame game;
-//    private String text;
 
     private GlyphLayout text;
     
     public StartScreen(SnakeGame game){
         this.game = game;
         game.font = new BitmapFont(Gdx.files.internal("droidSans.fnt"));
-//        text = "Snake Game";
-//        game.font.getData().setScale(1.0f);
         text = new GlyphLayout();
         text.setText(game.font, "SNAKE GAME", Color.WHITE, Gdx.graphics.getWidth(), Align.center, true);
        
@@ -36,11 +33,8 @@ public class StartScreen implements Screen {
     public void render(float delta) {
 
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-//        game.font.getData().setScale(2.7f);
 
         game.batch.begin();
-
-//        game.font.draw(game.batch, text, Gdx.graphics.getWidth() / 2f, Gdx.graphics.getHeight() / 2f);
         game.font.getData().setScale(1.0f);
         game.font.draw(game.batch, text, 0, Gdx.graphics.getHeight()/2);
 
