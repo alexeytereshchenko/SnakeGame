@@ -4,8 +4,10 @@ Classic game
 
 # how it run?
 
-You need jdk 8 version
+You need java 8 version
 
-into root project execute this in console
+current release https://github.com/Anth3995/SnakeGame/releases/tag/v0.1
+
+execute in console:
 
     java -jar SnakeGame.jar
